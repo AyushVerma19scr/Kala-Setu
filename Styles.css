@@ -9,6 +9,9 @@ header {
   border: 0; 
   border-bottom: 0.5px solid #FF9933;
 }
+.artisansbody{
+    background-color: rgb(232, 213, 183,0.3)
+}
 .divheading{ margin-left: 50px;
     padding: 5px;
     justify-content:space-evenly;
@@ -195,4 +198,102 @@ button{
 }
 ul li::marker {
   color: orange;  
+}
+.artisanspage{
+     text-align: center;
+     margin: 100px 250px 10px 250px;
+}
+.secondheading{
+    font-family: 'marcellus', serif;
+    font-size: 48px;
+    margin: 100px 0px 16px;
+    color: #2C1810;
+    font-weight: 500;
+   }
+#artisanspara{
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    color:#5C4A3A;
+    margin: 0px 30px;
+}
+/* This code is different from original*/
+.artisans{
+    margin: 50px 120px 0px 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 33px;
+}
+.artisansimages{
+    height: 120px;
+    border-radius: 100px;
+    margin: 60px 30px 20px 30px;
+}
+.artisansnames{
+    font-size: 24px;
+    font-family: 'marcellus', serif;
+    color: #2C1810;
+    margin: 0px 0px 4px;
+    font-weight: 300;
+}
+.allartisans{
+    border: solid;
+    border-color: #FF9933;
+    border-width: 0.5px;
+    border-radius: 10px;
+    background-color: white;
+    width: 310px;
+    height: 490px;
+    align-items: center;
+    text-align: center;
+}
+.aboutartisans{
+    background-color: rgb(232, 213, 183,0.3);
+    margin: 16px 25px 20px 25px;
+    border-radius: 10px;
+}
+.artist{
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    color: #FF9933;
+    font-weight: 300;
+    margin: 0px 0px 5px 0px;
+}
+.place{
+    font-size: 14px;
+    font-family:  'poppins', sans-serif;
+    font-weight: 100;
+    color: #5C4A3A;
+}
+.artisansdescription{
+      font-size: 14px;
+    font-family:  'poppins', sans-serif;
+    padding: 15px 18px 18px 18px;
+    text-align: left;
+}
+.experience{
+     font-size: 14px;
+    font-family:  'poppins', sans-serif;
+    margin: 10px 3px 10px 0px;
+}
+.time{
+         font-size: 14px;
+    font-family:  'poppins', sans-serif;
+    color: #FF9933;
+}
+.artisansfooter{
+    margin: 40px 0px 30px 0px;
+    align-items: center;
+    text-align: center;
+}
+#artisansfooterpara{
+    font-size: 16px;
+    font-family:'poppins', sans-serif ;
+    font-weight: 100;
+}
+#artisansfooterspan{
+    font-size: 14px;
+    font-family:'poppins', sans-serif  ;
+    font-weight: 100;
+    color: #FF9933;
 }
