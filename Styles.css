@@ -1,54 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500&display=swap');
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: white;
-  border: 0; 
-  border-bottom: 0.5px solid #FF9933;
-}
-.artisansbody{
-    background-color: rgb(232, 213, 183,0.3)
-}
-.divheading{ margin-left: 50px;
-    padding: 5px;
-    justify-content:space-evenly;
-    display:flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #FF9933;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    z-index: 999;
+    transition: all 0.3s ease;
 }
 button{
-    display: flex;
-    justify-content: flex-start;
+    outline: none;
     border: none;
-    background-color: white;
 }
-#logo{
-    height: 60px;
-    margin-top: 14px;
-    border: solid;
-    border-color: #FF9933;
-    border-width: 0.5px;
-    border-radius: 100px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    transition: padding 0.3s ease;
 }
-#heading1{
-    font-size: 22px;
-    font-family: marcellus,serif;
-    font-weight: 500;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-#slogan{
-    font-size: 10px;
-    font-family: poppins,sans-serif;
-    margin-top: 0%;
-    margin-left: 5px;
-}
-.anchors{ margin-top: 30px;
+.logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    margin-bottom: 30px;
     color: black;
+}
+#logo {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 1px solid #FF9933;
+    margin-right: 10px;
+}
+#heading1 {
+    font-family: 'Marcellus', serif;
+    font-weight: 300;
+    font-size: 25px;
+    margin: 0;
+}
+#slogan {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+.anchors {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+.anchors::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(90deg, #FF9933, #FF6600);
+    transition: width 0.3s ease;
+}
+.anchors:hover{
+    color: #FF6600;
+}
+.anchors:hover::after {
+    width: 100%;
+}
+@media screen and (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+ .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+ }
 }
 .divbox{
     align-items: center;
@@ -59,10 +95,8 @@ button{
 .box{ 
     padding: 8px 10px;
      background-color: white;
-     border:solid ;
-     border-color: #FF9933;
+     border:0.1px solid #FF9933;
      border-radius: 20px;
-     border-width: 0.1px;
      display: inline-block;
 }
 .top{
@@ -98,32 +132,51 @@ button{
     font-weight: 300;
     color: #5C4A3A;
 }
-.buttons{
+.indexbuttons{
     display: flex;
      align-items: center;
      gap: 20px;
      justify-content: center;
      padding: 0px;
 }
-.button{
-    font-size: 15px;
+.indexbutton{
+    font-size: 14px;
     padding: 8PX 24PX;
     font-family: 'poppins',sans-serif;
     border: none;
     border-radius: 10px;
     font-weight: 500;
     margin-bottom: 0px;
+    display: inline-flex;    
+    align-items: center;      
+    justify-content: center;  
      }
 #first{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0,0.15);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #FF9933;
     color: white;
+    transition: all 0.2s linear
+}
+.arrowicon {
+      width: 20px;         
+      height: 20px;
+      cursor: pointer;
+      stroke: white;  
+      margin-left: 3px;
+      margin-top: 2px;
+    }
+#first:hover{
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 #second{
     background-color: white;
-    border: solid;
-    border-color: #FF9933;
-    color:#FF9933;;
+    border: solid #FF9933;
+    color:#FF9933;
+    transition: all 0.2s linear
+}
+#second:hover{
+    color: #2C1810;
+    background-color: #FF993320;
 }
 .bottomcontainer {
     margin-left: 420px;
@@ -168,19 +221,90 @@ button{
     color:#5C4A3A;
     margin: 0px 30px;
 }
+.explorelabel{
+  position: absolute;    
+  top: 20px;             
+  right: 20px;             
+  background-color:rgba(255, 255, 255, 0.9);
+  color:#FF9933;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-family:'poppins', sans-serif ;
+}
 .crafts {
-    margin: 40px 105px 0px 105px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  margin: 40px 10px 0px 110px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.craftimage{
-    width: 280px;
-    border: solid;
-    border-radius: 15px 15px 0px 0px;
-    border-color: white;
+.craftpart {
+  position: relative;
+  box-sizing: border-box;
+  border: 1.5px solid transparent;       
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.craftpart:hover {
+  border-color: #FFA50060;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.imagepart {
+  position: relative;
+  width: 280px;
+  height: 220px;
+  overflow: hidden;
+}
+.craftimage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.craftpart:hover .craftimage {
+  transform: scale(1.08);
+}
+.imagepart::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.craftpart:hover .imagepart::after {
+  opacity: 1;
+}
+.crafttext {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  text-align: start;
+  padding: 8px 12px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 2; /
+}
+
+.craftpart:hover .crafttext {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .headingcrafts{
     font-family:'marcellus', serif ;
     font-size: 20px;
@@ -196,6 +320,9 @@ button{
 }
 ul li::marker {
   color: orange;  
+}
+.artisansbody{
+    background-color: #E8D5B740;
 }
 .artisanspage{
      text-align: center;
@@ -220,7 +347,7 @@ ul li::marker {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
 }
 .artisansimages{
     height: 120px;
@@ -235,15 +362,20 @@ ul li::marker {
     font-weight: 300;
 }
 .allartisans{
-    border: solid;
-    border-color: #FF9933;
-    border-width: 0.5px;
+    border: solid 1.5px #FFA50060;
     border-radius: 10px;
     background-color: white;
     width: 290px;
     height: 490px;
     align-items: center;
     text-align: center;
+    transition: all linear 0.2s;
+}
+.allartisans:hover{
+      box-shadow: 
+      0 6px 25px rgba(0,0,0,0.05),   
+    6px 6px 25px rgba(0,0,0,0.05),  
+    -6px 6px 25px rgba(0,0,0,0.05); 
 }
 .aboutartisans{
     background-color: rgb(232, 213, 183,0.3);
@@ -295,14 +427,6 @@ ul li::marker {
     font-weight: 100;
     color: #FF9933;
 }
-.icon {
-      width: 20px;         
-      height: 20px;
-      cursor: pointer;
-      stroke: white;  
-      margin-left: 3px;
-      margin-top: 3px;
-    }
     .icon-location {
   width: 15px;     
   height: 15px;
@@ -322,12 +446,15 @@ ul li::marker {
 .getintouch{
     width: 490px;
     height: 430px;
-    border: solid;
-    border-color: #FF9933;
+    border: solid 1.5px #FFA50050;
     margin: 20px 30px 0px 100px;
     border-radius: 15px;
-    border-width: 0.5px;
      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0,0.1);
+     transition: ease all 0.3s;
+}
+.getintouch:hover{
+    border-color: #FFA50090;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0,0.15);
 }
 .icon-edit {
   width: 20px;         
@@ -348,15 +475,21 @@ ul li::marker {
     font-weight: bold;
 }
 .inputs{
-    border: none;
+     border: none;
     margin: 0px 0px 5px 38px;
-    padding: 5px;
+    padding: 6px;
     width: 400px;
+    outline: none;
+}
+.inputs:focus {
+  border-color: darkorange;       
+ box-shadow: 0 0 10px 2px rgba(255, 153, 51, 0.75);
+ border-radius: 5px;
 }
 #submissionbutton{
       display: flex;
     justify-content: center;
-    background-color: #FF9933;
+    background-color:darkorange;
     width: 445px;
     margin: 40px 20px 20px 20px;
     border-radius: 12px;
@@ -364,6 +497,10 @@ ul li::marker {
     color: white;
     font-family: 'poppins', sans-serif;
     font-size: 14px;
+    transition: all ease 0.3s;
+}
+#submissionbutton:hover{
+    background-color: #FFA500;
 }
 #buttonspan{
     margin-left: 5px;
@@ -373,14 +510,16 @@ ul li::marker {
     flex-wrap: wrap;
 }
 .contactboxessection{
-    border: solid;
-   border-color: #FF9933;
+    border: solid #FFA50050 1.5px;
    margin: 0px 0px 20px  13px;
    border-radius: 10px;
    width: 380px;
-   border-width: 0.5px;
    background-color: rgb(232, 213, 183,0.15);
    display: flex;
+   transition: all 0.3s ease;
+}
+.contactboxessection:hover{
+    border-color:#FFA50090 ;
 }
 .contactlogos{
     border-radius: 50px;
@@ -434,16 +573,18 @@ ul li::marker {
     margin-top: 21px;
 }
 .supportlocalartists{
-    border: solid;
-    border-color: #FF9933;
+    border: solid #FFA50050 1.5px;
     border-radius: 10px;
-    border-width: 0.5px;
     background-color: rgb(232, 213, 183,0.15) ;
     display: flex;
     justify-self: end;
     flex-direction: column;
-    margin-right: 110px;
-    width: 380px;
+    margin-right: 108px;
+    width: 381px;
+    transition: all ease 0.3s;
+}
+.supportlocalartists:hover{
+    border-color: #FFA50090;
 }
 #supportheading{
     font-size: 15px;
@@ -473,20 +614,31 @@ ul li::marker {
     gap: 25px;
 }
 .item{
-    border: solid;
-    border-color: #FF9933;
+    border: solid #FF9933 0.5px;
     border-radius: 10px;
-    border-width: 0.5px;
+    transition: all ease 0.5s;
+    display:inline-block;
+    width:300px;
+    overflow: hidden;
+}
+.item:hover{
+    box-shadow:  0 6px 25px rgba(0,0,0,0.05),    6px 6px 25px rgba(0,0,0,0.1),   -6px 6px 25px rgba(0,0,0,0.1); 
 }
 .image-container {
   position: relative;     
   display: inline-block; 
+  overflow: hidden;
 }
 .itemimage{
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+ display: block;
+}
+.item:hover .itemimage {
+  transform: scale(1.07);   
 }
 .label {
   position: absolute;    
@@ -579,15 +731,18 @@ ul li::marker {
 #viewproducts{
     padding: 8px 20px 8px 20px;
     color: #FF9933;
-    border: solid;
+    border: solid #FF9933 1.5px;
     border-radius: 10px;
-    border-color: #FF9933;
-    border-width: 1.5px;
     background-color: rgb(232, 213, 183,0.2) ;
     font-size: 14px;
     font-family: 'poppins', sans-serif ;
-    font-weight: bold;
+    font-weight: 500;
+    transition: all 0.2s ease;
     }
+#viewproducts:hover{
+        color: #2C1810;
+        background-color:rgb(232, 213, 183,0.3) ;
+ }
 .shopbutton{
         display: flex;
         justify-content: center;
@@ -605,15 +760,5 @@ ul li::marker {
     position: relative;     
   display: inline-block; 
 }
-.explorelabel{
-  position: absolute;    
-  top: 20px;             
-  right: 20px;             
-  background-color:rgba(255, 255, 255, 0.9);
-  color:#FF9933;
-  padding: 5px 10px;
-  border-radius: 25px;
-  font-size: 12px;
-  font-family:'poppins', sans-serif ;
-}
+
 
