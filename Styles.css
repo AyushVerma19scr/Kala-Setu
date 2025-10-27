@@ -843,6 +843,14 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     color: #5C4A3A;
 }
 /* Responsive */
+@media (max-width :1024px ){
+  .contactheader{
+    margin: 140px 20px 10px 20px
+  }
+  .contactboxessection{
+    margin-left: 0%;
+  }
+}
 @media (max-width: 600px) {
   .contactpage{
     margin-top: 140px;
@@ -1009,19 +1017,24 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     margin-top: 140px;
    }
   .cultureboxleft{
-    margin-left: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     width: 280px;
     display: flex;
     text-align: left;
   }
     .cultureboxright{
-    margin-left: 10px;
+    margin-left: 00px;
     width: 280px;
     display: flex;
   }
+  .historydescriptionright{
+    margin-left: 20px;
+    margin-right: 40px;
+  }
   .historydescription{
     margin-left: 20px;
-    margin-right: 50px;
+     margin-right: 50px;
   }
   .culturefooter{
     width: 280px;
