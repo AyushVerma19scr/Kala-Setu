@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500&display=swap');
+/*Header of all webpages*/
 header {
     position: fixed;
     top: 0;
@@ -10,6 +11,12 @@ header {
     z-index: 999;
     transition: all 0.3s ease;
 }
+html, body {
+  font-family: 'Poppins', sans-serif;
+  color: #5C4A3A; 
+}
+h1,h2,h3,h4 
+{ font-family: 'Marcellus', serif; color: #2C1810; }
 button{
     outline: none;
     border: none;
@@ -86,18 +93,42 @@ button{
         margin-top: 10px;
  }
 }
+@media screen and (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+ .nav-links {
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 8px;
+ }
+ .anchors{
+  padding: 0%;
+  font-size: 14px;
+ }
+}
+/*Homepage*/
+.index {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem;
+  text-align: center;
+}
 .divbox{
-    align-items: center;
       display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 2rem;
 }
 .box{ 
     padding: 8px 10px;
      background-color: white;
      border:0.1px solid #FF9933;
      border-radius: 20px;
-     display: inline-block;
+     display: inline-flex;
+     align-items: center;
+      gap: 5px;
 }
 .top{
     color: #FF9933;
@@ -107,49 +138,46 @@ button{
      font-size: 12px;
 }
 #spantop{
-    font-size: 15px;
+    font-size: 14px;
 }
 #Mainheading{
     text-align: center;
     align-content: center;
-    font-size: 64px;
+     font-size: clamp(2.2rem, 8vw, 4.1rem);
   font-family: 'Marcellus',serif;
   font-weight: 350;
-  margin-top: 5px;
-  margin-bottom: 3px;
+    margin: 0.6rem 0 0.25rem;
 }
 #span1{
     color: #FF9933
 }
 #para1{
     font-family: 'poppins',sans-serif;
-    font-size: 18px;
-    margin-top: 15px;
-    margin-left: 200px;
-    margin-right: 200px;
+    font-size: 1.13rem;
+    margin: 15px 210px 28px 210px;
     text-align: center;
-    margin-bottom: 28px;
-    font-weight: 300;
+    font-weight: 400;
     color: #5C4A3A;
 }
 .indexbuttons{
     display: flex;
      align-items: center;
-     gap: 20px;
+      gap: 1.2rem;
      justify-content: center;
      padding: 0px;
 }
 .indexbutton{
     font-size: 14px;
-    padding: 8PX 24PX;
+    padding: 8px 24px;
     font-family: 'poppins',sans-serif;
     border: none;
     border-radius: 10px;
     font-weight: 500;
-    margin-bottom: 0px;
     display: inline-flex;    
     align-items: center;      
-    justify-content: center;  
+    justify-content: center; 
+    cursor: pointer; 
+    min-height: 44px;
      }
 #first{
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -179,18 +207,17 @@ button{
     background-color: #FF993320;
 }
 .bottomcontainer {
-    margin-left: 420px;
-    margin-right: 420px;
+   margin: 0.2rem auto 0;
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
   padding: 7px;
+  gap: 1rem;
 }
 .number{
     display: flex;
     justify-content: center;
     font-size: 24px;
-    font-family: 'poppins',sans-serif ;
     margin-bottom: 5px;
     margin-top: 13px;
     color: #FF9933;
@@ -199,45 +226,69 @@ button{
     display: flex;
     justify-content: center;
     font-size: 14px;
-    font-family: 'poppins',sans-serif ;
     margin-bottom: 10px;
     color:#5C4A3A;
     margin-top: 0px;
 }
+/*Responsive*/
+@media (max-width: 1024px) {
+  .index{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .index{
+    margin-top: 60px;
+  }
+  #para1 {
+    margin:10px;
+    font-size: 14px;
+  }
+  .indexbutton{
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-top: 8px;
+  }
+  .number{
+    font-size: 18px;
+  }
+  .indexlabel{
+    font-size: 12px;
+  }
+  #spanin{
+    font-size: 10px;
+  }
+  #spantop{
+    font-size:12px ;
+  }
+}
+/* Explore Webpage */
 .explorepage{
      text-align: center;
-     margin: 60px 250px 10px 250px;
+      margin: 5.8rem auto 0.625rem auto;
+       max-width: 1100px;  
+       padding: 0 20px;   
 }
-#secondheading{
-    font-family: 'marcellus', serif;
-    font-size: 48px;
-    margin: 0px 0px 16px;
+.secondheading{
+     font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom:  16px;
     color: #2C1810;
     font-weight: 500;
+    text-align: center;
    }
 #explorepara{
-    font-family: 'poppins', sans-serif;
-    font-size: 18px;
+     font-size: 18px;
     color:#5C4A3A;
-    margin: 0px 30px;
-}
-.explorelabel{
-  position: absolute;    
-  top: 20px;             
-  right: 20px;             
-  background-color:rgba(255, 255, 255, 0.9);
-  color:#FF9933;
-  padding: 5px 10px;
-  border-radius: 25px;
-  font-size: 12px;
-  font-family:'poppins', sans-serif ;
+    margin: 0px 180px;
 }
 .crafts {
-  margin: 40px 10px 0px 110px;
+  margin: 30px auto 0 auto;
   display: flex;
-  align-items: center;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+   max-width: 1100px;
+  padding: 0 20px;
 }
 .craftpart {
   position: relative;
@@ -247,6 +298,7 @@ button{
   overflow: hidden;
   padding: 0;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+   width: 280px;
 }
 .craftpart:hover {
   border-color: #FFA50060;
@@ -290,23 +342,29 @@ button{
   left: 0;
   width: 100%;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   text-align: start;
   padding: 8px 12px;
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
-  z-index: 2; /
+  z-index: 2; 
 }
-
+.explorelabel{
+  position: absolute;    
+  top: 20px;             
+  right: 20px;             
+  background-color:rgba(255, 255, 255, 0.9);
+  color:#FF9933;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 12px;
+}
 .craftpart:hover .crafttext {
   transform: translateY(0);
   opacity: 1;
 }
-
 .headingcrafts{
-    font-family:'marcellus', serif ;
     font-size: 20px;
     color: #2C1810;
     margin:30px 0px 5px 30px;
@@ -314,59 +372,55 @@ button{
 }
 .bullet{
     margin-top: 0%;
-    font-family: 'poppins', sans-serif;
     font-weight: 100;
     font-size: 14px;
 }
 ul li::marker {
   color: orange;  
 }
-.artisansbody{
-    background-color: #E8D5B740;
+/* Responsive */
+@media (max-width: 1024px) {
+  .explorepage{
+    margin-top: 140px;
+  }
 }
+@media (max-width: 600px) {
+  #explorepara {
+    margin:10px;
+    font-size: 14.5px;
+  }
+   .explorepage{
+    margin-top: 140px;
+  }
+}
+/*Artisans Webpage */
 .artisanspage{
      text-align: center;
-     margin: 100px 250px 10px 250px;
+     margin: 6.25rem auto 0.625rem auto;
+      max-width: 68.75rem; 
+    padding: 0 1.25rem;
 }
-.secondheading{
-    font-family: 'marcellus', serif;
-    font-size: 48px;
-    margin: 100px 0px 16px;
-    color: #2C1810;
-    font-weight: 500;
-    text-align: center;
-   }
+.artisansbody{
+    background:linear-gradient(to bottom,#E8D5B740 40%,#E8D5B730 50% ,#E8D5B720 80% ,#E8D5B710 100%); 
+}
 #artisanspara{
-    font-family: 'poppins', sans-serif;
-    font-size: 18px;
+      font-size: 18px;
     color:#5C4A3A;
-    margin: 0px 30px;
+     margin: 0px 200px
 }
 .artisans{
-    margin: 50px 100px 0px 100px;
+     margin: 2.5rem auto 0 auto;
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
-}
-.artisansimages{
-    height: 120px;
-    border-radius: 100px;
-    margin: 60px 30px 20px 30px;
-}
-.artisansnames{
-    font-size: 24px;
-    font-family: 'marcellus', serif;
-    color: #2C1810;
-    margin: 0px 0px 4px;
-    font-weight: 300;
+     gap: 1.3rem;
 }
 .allartisans{
     border: solid 1.5px #FFA50060;
     border-radius: 10px;
     background-color: white;
-    width: 290px;
-    height: 490px;
+     width: 18.125rem; 
+    height: 30.625rem; 
     align-items: center;
     text-align: center;
     transition: all linear 0.2s;
@@ -377,248 +431,104 @@ ul li::marker {
     6px 6px 25px rgba(0,0,0,0.05),  
     -6px 6px 25px rgba(0,0,0,0.05); 
 }
+.artisansimages{
+     height: 7.5rem;
+    border-radius: 100px;
+    margin: 3.75rem 1.875rem 1.25rem 1.875rem; 
+}
+.artisansnames{
+    font-size: 24px;
+    color: #2C1810;
+    margin: 0px 0px 4px;
+    font-weight: 300;
+}
 .aboutartisans{
     background-color: rgb(232, 213, 183,0.3);
     margin: 16px 25px 20px 25px;
     border-radius: 10px;
 }
 .artist{
-    font-family: 'poppins', sans-serif;
     font-size: 16px;
     color: #FF9933;
     font-weight: 300;
     margin: 0px 0px 5px 0px;
 }
+  .icon-location {
+  width: 15px;     
+  height: 15px;
+  margin-top: 3px;
+}
 .place{
     font-size: 14px;
-    font-family:  'poppins', sans-serif;
     font-weight: 100;
     color: #5C4A3A;
 }
 .artisansdescription{
       font-size: 14px;
-    font-family:  'poppins', sans-serif;
     padding: 15px 18px 18px 18px;
     text-align: left;
 }
 .experience{
      font-size: 14px;
-    font-family:  'poppins', sans-serif;
     margin: 10px 3px 10px 0px;
 }
 .time{
          font-size: 14px;
-    font-family:  'poppins', sans-serif;
     color: #FF9933;
 }
 .artisansfooter{
-    margin: 40px 0px 30px 0px;
-    align-items: center;
+    margin: 2.5rem 0 1.875rem 0;
     text-align: center;
 }
 #artisansfooterpara{
     font-size: 16px;
-    font-family:'poppins', sans-serif ;
     font-weight: 100;
 }
 #artisansfooterspan{
     font-size: 14px;
-    font-family:'poppins', sans-serif  ;
     font-weight: 100;
     color: #FF9933;
 }
-    .icon-location {
-  width: 15px;     
-  height: 15px;
-  cursor: pointer;
-  margin-top: 3px;
+/* Responsive */ 
+@media (max-width: 1024px) {
+  .artisanspage{
+    margin-top: 140px;
+  }
 }
-.supportpara{
-      font-family: 'poppins', sans-serif;
-    font-size: 18px;
+@media (max-width: 600px) {
+  #artisanspara {
+    margin:10px;
+    font-size: 14.5px;
+  }
+   .artisanspage{
+    margin-top: 140px;
+  }
+}
+/* Shop Webpage */
+.shoppage{
+     text-align: center;
+     margin: 6.25rem auto 0.625rem auto;
+      max-width: 68.75rem; 
+    padding: 0 1.25rem;
+}
+#shoppara{  
+      font-size: clamp(1.1rem, 1.2vw, 1.2rem);
     color:#5C4A3A;
-    margin: 0px 30px;
-}
-.contactheader{
-    margin: 20px 250px 20px 250px;
-    text-align: center;
-}
-.getintouch{
-    width: 490px;
-    height: 430px;
-    border: solid 1.5px #FFA50050;
-    margin: 20px 30px 0px 100px;
-    border-radius: 15px;
-     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0,0.1);
-     transition: ease all 0.3s;
-}
-.getintouch:hover{
-    border-color: #FFA50090;
-    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0,0.15);
-}
-.icon-edit {
-  width: 20px;         
-  height: 20px;
-  cursor: pointer;
-}
-#getheading{
-    font-size: 24px;
-    font-family:'marcellus', serif ;
-    margin: 25px 0px 40px 25px;
-    font-weight: 100;
-}
-.inputheadings{
-    margin: 25px 0px 10px 28px;
-    font-family:'poppins', sans-serif ;
-    font-size: 14px;
-    color:#2C1810;
-    font-weight: bold;
-}
-.inputs{
-     border: none;
-    margin: 0px 0px 5px 38px;
-    padding: 6px;
-    width: 400px;
-    outline: none;
-}
-.inputs:focus {
-  border-color: darkorange;       
- box-shadow: 0 0 10px 2px rgba(255, 153, 51, 0.75);
- border-radius: 5px;
-}
-#submissionbutton{
-      display: flex;
-    justify-content: center;
-    background-color:darkorange;
-    width: 445px;
-    margin: 40px 20px 20px 20px;
-    border-radius: 12px;
-    padding: 8px;
-    color: white;
-    font-family: 'poppins', sans-serif;
-    font-size: 14px;
-    transition: all ease 0.3s;
-}
-#submissionbutton:hover{
-    background-color: #FFA500;
-}
-#buttonspan{
-    margin-left: 5px;
-}
-.contactboxes{
-    display: flex;
-    flex-wrap: wrap;
-}
-.contactboxessection{
-    border: solid #FFA50050 1.5px;
-   margin: 0px 0px 20px  13px;
-   border-radius: 10px;
-   width: 380px;
-   background-color: rgb(232, 213, 183,0.15);
-   display: flex;
-   transition: all 0.3s ease;
-}
-.contactboxessection:hover{
-    border-color:#FFA50090 ;
-}
-.contactlogos{
-    border-radius: 50px;
-    height: 42px;
-    width: 42px;
-    display: flex;
-    justify-content: center;
-    margin: 20px 10px 0px 20px;
-}
-.contactdetailboxes{
-    margin-left: 5px;
-}
-#emaillogo{
-    background-color: #FF9933;
-}
-#phonelogo{
-    background-color:forestgreen;
-}
-#contactlocationlogo{
-    background-color: #FF9933;
-}
-.svgcontactlogos{
-    margin-top: 8px;
-}
-.contactlogosheadings{
-    font-size: 16px;
-    font-family: 'marcellus', serif;
-    color: #2C1810;
-    font-weight: lighter;
-    margin:27px 0px 10px 0px;
-}
-.contactfirstpara{
-    color: #5C4A3A;
-    font-size: 15px;
-    font-family: 'poppins', sans-serif;
-    margin-top: 15px;
-    margin-bottom: 0px;
-}
-.contactsecondpara{
-    color: #5C4A3A;
-    font-size: 15px;
-    font-family: 'poppins', sans-serif;
-    margin-top: 2px;
-    margin-bottom: 20px;
-}
-.contactdetails{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 21px;
-}
-.supportlocalartists{
-    border: solid #FFA50050 1.5px;
-    border-radius: 10px;
-    background-color: rgb(232, 213, 183,0.15) ;
-    display: flex;
-    justify-self: end;
-    flex-direction: column;
-    margin-right: 108px;
-    width: 381px;
-    transition: all ease 0.3s;
-}
-.supportlocalartists:hover{
-    border-color: #FFA50090;
-}
-#supportheading{
-    font-size: 15px;
-    font-weight:lighter;
-    font-family: 'marcellus', serif;
-    margin: 20px 0px 10px 20px;
-    color: #2C1810;
-}
-.supportlist{
-    margin: 5px 20px 0px 25px;
-}
-.supportdescription{
-    font-size: 12px;
-    font-family: 'poppins', sans-serif;
-    color: #5C4A3A;
-}
-#shoppara{  font-family: 'poppins', sans-serif;
-    font-size: 18px;
-    color:#5C4A3A;
-    margin: 0px 285px 40px 285px;
-    text-align: center;
+     margin: 0px 200px 30px 200px;
 }
 .shopitems{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 23px;
 }
 .item{
     border: solid #FF9933 0.5px;
     border-radius: 10px;
     transition: all ease 0.5s;
     display:inline-block;
-    width:300px;
+    width: 90%;  
+    max-width: 300px; 
     overflow: hidden;
 }
 .item:hover{
@@ -649,7 +559,6 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   padding: 5px 10px;
   border-radius: 25px;
   font-size: 12px;
-  font-family:'poppins', sans-serif ;
 }
 .rating {
   display: inline-flex;
@@ -683,12 +592,12 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
       display: flex;
     justify-content: center;
     background-color: #FF9933;
-    width: 270px;
-    margin: 10px 10px 10px 18px;
+      width: 90%;
+    max-width: 270px;
+     margin: 10px auto;
     border-radius: 10px;
     padding: 8px;
     color: white;
-    font-family: 'poppins', sans-serif;
     font-size: 14px;
     font-weight: 501;
 }
@@ -701,30 +610,26 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .itemartist{
     font-size: 12px;
-    font-family:  'poppins', sans-serif;
    color: #FF9933;
    margin-bottom: 0px;
 }
 .itemname{
     color: #2C1810;
-    font-family:'marcellus', serif ;
     font-size: 18px;
     font-weight: lighter;
     margin: 10px 0px 10px 0px;
     }
 .itemdescription{
-    margin: 25px 0px 10px 20px;
+    margin: 18px 0px 10px 0px;
 }
 .cost{
     font-size: 20px;
-     font-family:  'poppins', sans-serif;
      color: #2C1810;
      margin-top: 10px;
 }
 .noncost{
     font-size: 14px ;
     text-decoration: line-through;
-      font-family:  'poppins', sans-serif;
       color: #2C1810;
       margin: 0px;
 }
@@ -735,7 +640,6 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     border-radius: 10px;
     background-color: rgb(232, 213, 183,0.2) ;
     font-size: 14px;
-    font-family: 'poppins', sans-serif ;
     font-weight: 500;
     transition: all 0.2s ease;
     }
@@ -748,7 +652,7 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
         justify-content: center;
         margin: 30px 0px 30px 0px;
     }
-    .tick-icon {
+.tick-icon {
   width: 10px;
   height: 10px;
   color: darkorange;
@@ -756,9 +660,373 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 .tickspan{
     margin-top: 15px;
 }
-.imagepart{
-    position: relative;     
-  display: inline-block; 
+/* Responsive */
+@media (max-width: 1024px) {
+  .shoppage{
+    margin-top: 140px;
+  }
+   #shoppara {
+    margin:20px;
+  }
 }
+@media (max-width: 600px) {
+  #shoppara {
+    margin:10px;
+  }
+   .shoppage{
+    margin-top: 140px;
+  }
+}
+/* Contact Webpage */
+.contactpage{ 
+     margin: 6.25rem auto 0.625rem auto;
+     max-width: 68.75rem; 
+     padding: 0 1.25rem;
+}
+.supportpara{
+    font-size: 18px;
+    color:#5C4A3A;
+    margin: 0px 30px;
+}
+.contactheader{
+     margin: 1.25rem 15.625rem;
+    text-align: center;
+}
+.getintouch{
+    width: 30.625rem; 
+    height: 26.875rem; 
+    border: solid 1.5px #FFA50050;
+    margin: 1.25rem 0.875rem 0 0.25rem;
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0,0.1);
+    transition: ease all 0.3s;
+}
+.getintouch:hover{
+    border-color: #FFA50090;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0,0.15);
+}
+.icon-edit {
+  width: 1.25rem;
+    height: 1.25rem;
+}
+#getheading{
+    font-size: 1.5rem;
+    margin: 1.563rem 0 2.5rem 1.563rem; 
+    font-weight: 100;
+}
+.inputheadings{
+     margin: 1.563rem 0 0.625rem 1.75rem;
+     font-size: 0.875rem;
+    color:#2C1810;
+    font-weight: bold;
+}
+.inputs{
+     border: none;
+    margin: 0px 0px 5px 38px;
+    padding: 6px;
+    width: 25rem;
+    outline: none;
+}
+.inputs:focus {
+  border-color: darkorange;       
+ box-shadow: 0 0 10px 2px rgba(255, 153, 51, 0.75);
+ border-radius: 5px;
+}
+#submissionbutton{
+      display: flex;
+    justify-content: center;
+    background-color:darkorange;
+     width: 27.813rem;
+     margin: 2.5rem 1.25rem 1.25rem 1.25rem;
+    border-radius: 12px;
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    transition: all ease 0.3s;
+}
+#submissionbutton:hover{
+    background-color: #FFA500;
+}
+#buttonspan{
+    margin-left: 5px;
+}
+.contactboxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contactboxessection{
+    border: solid #FFA50050 1.5px;
+   margin: 0px 0px 20px  13px;
+   border-radius: 10px;
+   width: 380px;
+   background-color: rgb(232, 213, 183,0.1);
+   display: flex;
+   transition: all 0.3s ease;
+}
+.contactboxessection:hover{
+    border-color:#FFA50090 ;
+}
+.contactlogos{
+    border-radius: 50px;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 0px 20px;
+}
+.contactdetailboxes{
+    margin-left: 5px;
+}
+#emaillogo{
+    background-color: #FF9933;
+}
+#phonelogo{
+    background-color:forestgreen;
+}
+#contactlocationlogo{
+    background-color: #FF9933;
+}
+.svgcontactlogos{
+    margin-top: 8px;
+}
+.contactlogosheadings{
+    font-size: 16px;
+    color: #2C1810;
+    font-weight: lighter;
+    margin:27px 0px 10px 0px;
+}
+.contactfirstpara{
+    color: #5C4A3A;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.contactsecondpara{
+    color: #5C4A3A;
+    font-size: 15px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+.contactdetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 21px;
+}
+.supportlocalartists{
+    border: solid #FFA50060 1.5px;
+    border-radius: 10px;
+    background-color: rgb(232, 213, 183,0.2) ;
+    display: flex;
+    justify-self: end;
+    flex-direction: column;
+     width: 23.813rem;
+    transition: all ease 0.3s;
+}
+.supportlocalartists:hover{
+    border-color: #FFA50090;
+}
+#supportheading{
+    font-size: 15px;
+    font-weight:lighter;
+    margin: 20px 0px 10px 20px;
+    color: #2C1810;
+}
+.supportlist{
+    margin: 5px 20px 0px 25px;
+}
+.supportdescription{
+    font-size: 12px;
+    color: #5C4A3A;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .contactpage{
+    margin-top: 140px;
+  }
+   .contactheader{
+    margin: 2.5rem auto 0.625rem auto;
+  }
+  .supportpara{
+    margin: 10px 0px 5px 0px;
+    font-size: 14.5px;
+  }
+  .getintouch{
+    width: 280px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .inputs{
+    width: 200px;
+  }
+  #submissionbutton{
+    width: 250px;
+  }
+  .contactboxessection{
+    width: 280px;
+    margin-left: 0px;
+  }
+  .contactsecondpara{
+    font-size: 14px;
+  }
+  .supportlocalartists{
+    width: 280px;
+  }
+}
+/* Culture Webpage */
+#culturebody{
+  margin-top: 100px;
+    background:linear-gradient(to bottom,#fff 3%, #E8D5B720 28%,#E8D5B725 30%, #E8D5B730 50% ,#E8D5B735 75% ,#f4d8a950 100%); 
+}
+#culturepara{
+    font-size: 18px;
+    color:#5C4A3A;
+    margin: 0px 260px 40px 260px;
+    text-align: center;
+}
+.cultureboxessection{
+    display:block;
+    position: relative; 
+    width: 100%;
+}
+@media screen and (min-width: 1024px){
+  .cultureboxessection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; 
+    width: 2px; 
+    background: linear-gradient(to bottom, #FFA500 40%,#e7ba67 50% ,#50b750 80% ,#008000 100%); 
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+}
+.cultureboxleft{
+    border: 2px #FFA50050 solid;
+    border-radius: 15px;
+    width: 370px;
+    margin:25px 110px 0px 110px ;
+    background-color: white;
+    text-align: right;
+    transition: all ease 0.5s;
+}
+.cultureboxleft:hover{
+   box-shadow:  0 6px 25px rgba(0,0,0,0.05),    6px 6px 25px rgba(0,0,0,0.1),   -6px 6px 25px rgba(0,0,0,0.1); 
+}
+.historydescription{
+    margin: 15px 25px 25px 70px;
+}
+.culturehistory{
+    color:#FF9933;
+     padding: 4px 6px;
+    border: transparent solid 0px ;
+    background-color: #FF993318;
+    border-radius: 15px;
+    font-size: 13px;
+}
+.historyheading{
+    font-weight: 550;
+    margin: 10px 0px 10px 0px;
+    font-size: 22px;
+    color: #2C1810;
+}
+.historypara{
+    margin: 10px 0px 10px 0px;
+    font-size: 15px;
+    color:#5C4A3A;
+}
+.cultureboxright{
+    border: 2px #FFA50050 solid;
+    border-radius: 15px;
+    width: 370px;
+    background-color: white;
+    text-align: left;
+    margin: 25px 110px 0 auto;
+    transition: all ease 0.5s;
+}
+.cultureboxright:hover{
+   box-shadow:  0 6px 25px rgba(0,0,0,0.05),    6px 6px 25px rgba(0,0,0,0.1),   -6px 6px 25px rgba(0,0,0,0.1); 
+}
+.historydescriptionright{
+    margin: 15px 70px 25px 25px;
+}
+.culturefooter{
+    background-color: white;
+    border: 0.5px #FF9933 solid;
+    width: 420px;
+    border-radius: 15px;
+      margin: 60px auto 60px auto; 
+     text-align: center;
+     background-color: white;
+     box-shadow: -2px 2px 10px 2px rgba(0,0,0,0.03),  2px 2px 10px 2px rgba(0,0,0,0.03),    0 6px 25px 3px rgba(0,0,0,0.1); ;
+}
+.culturefooterpara1{
+    font-size: 17px;
+    color: #2C1810;
+    margin: 20px 0px 10px 0px;
+}
+.culturefooterspan{
+    color: #FF9933;
+}
+.culturefooterpara2{
+    font-size: 13px;
+    color: #5C4A3A;
+    margin: 0px 10px 20px 10px;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  #cultureheading{
+    margin-top: 140px;
+  }
+   #culturepara {
+    margin:20px;
+  }
+  .cultureboxessection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cultureboxleft{
+    margin-right: 20px;
+    margin-left: 0px;
+    width: 300px;
+  }
+  .cultureboxright{
+    margin-right: 0px;
+    width: 300px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 600px) {
+  #culturepara {
+    margin:10px;
+  }
+   #cultureheading{
+    margin-top: 140px;
+   }
+  .cultureboxleft{
+    margin-left: 10px;
+    width: 280px;
+    display: flex;
+    text-align: left;
+  }
+    .cultureboxright{
+    margin-left: 10px;
+    width: 280px;
+    display: flex;
+  }
+  .historydescription{
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+  .culturefooter{
+    width: 280px;
+  }
+}
+
 
 
