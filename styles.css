@@ -917,22 +917,56 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     margin: 0px 260px 40px 260px;
     text-align: center;
 }
-.cultureboxessection{
-    display:block;
-    position: relative; 
-    width: 100%;
+.cultureboxessection {
+  position: relative;
+  display: block; 
 }
-@media screen and (min-width: 1024px){
-  .cultureboxessection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%; 
-    width: 2px; 
-    background: linear-gradient(to bottom, #FFA500 40%,#e7ba67 50% ,#50b750 80% ,#008000 100%); 
-    transform: translateX(-50%);
-    border-radius: 2px;
+@media(min-width:700px){
+.cultureboxessection::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom,#FFA500 15%, #55b655 30% , #06a706, #008000 70% , #e7ba67 90%,#FFA500 100% );
+  border-radius: 2px;
+  z-index: 1;
+}
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr; 
+  align-items: center;                 
+  position: relative;
+  padding: 18px 0;
+  gap: 0;
+}
+.timeline-row .cultureboxleft {
+  grid-column: 1 / 2;
+  justify-self: end;  
+  position: relative; 
+  z-index: 3;         
+}
+
+.timeline-row .cultureboxright {
+  grid-column: 3 / 4;
+  justify-self: start; 
+  position: relative;
+  z-index: 3;
+}
+.timeline-row::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;                  
+  border: 4px solid #ff9933;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  z-index: 4; 
 }
 }
 .cultureboxleft{
@@ -1272,7 +1306,6 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   padding: 6px 12px;
   border-radius: 15px;
 }
-
 .storycontent {
   width: 54%;
   padding: 18px 40px 20px 32px;
@@ -1281,7 +1314,6 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   justify-content: flex-start; 
   font-size: 14px;
 }
-
 .storythings {
   margin-bottom: 0px;
 }
@@ -1301,26 +1333,21 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   font-size: 30px;
   font-weight: lighter;
 }
-
 .storydescription {
   margin: 10px 20px 28px 0px;
   line-height: 1.65;
   font-size: 14px;
 }
-
 .story-footer {
   margin-top: auto; 
   border-top: 1px solid #ff993330;
   padding-top: 10px;
 }
-
-
 .authorinfo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .authorimg {
   width: 44px;
   height: 44px;
@@ -1518,7 +1545,6 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   border-radius: 15px;
   object-position: top;
  }
-
 .storiesbox{
   margin-top: 20px;
   background-color: #ff993310;
@@ -1568,5 +1594,4 @@ transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
    .storiesheading{
     font-size: 30px;
    }
-  
 }
